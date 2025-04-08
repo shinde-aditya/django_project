@@ -26,5 +26,6 @@ def add(request):
         val2=int(request.GET['svalue'])
         sum=val1+val2
 
+
     return render(request,'result.html',{'sum':sum})
 
