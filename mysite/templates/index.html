@@ -1,1 +1,48 @@
+<a href="{% url 'aboutpage' %}" >About Us</a><br>
+<a href="{% url 'contactus' %}" >Contact Us</a><br>
+<a href="{% url 'service' %}" >Service</a>
+
 <h1>Hi welcome to Django</h1>
+{% comment %} <h3>Name=   {{name}}</h3><br>
+<h3>EMPID= {{EMPID}}</h3><br>
+    <h3>Mobile ={{Mobile_No}}</h3><br>
+    <h3>Email_Id={{Email_Id}}</h3> {% endcomment %}
+
+    {% comment %} <html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>EMPID</th>
+    <th>Mobile No</th>
+    <th>Email_Id</th>
+  </tr>
+  <tr>
+    <td>{{name}}</td>
+    <td>{{EMPID}}</td>
+    <td>{{Mobile_No}}</td>
+    <td>{{Email_Id}}</td>
+  </tr>
+   
+</table>
+
+</body>
+</html> {% endcomment %}
+
+<form action="{% url 'adition' %}" method="GET">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fvalue"><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="svalue"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+  
